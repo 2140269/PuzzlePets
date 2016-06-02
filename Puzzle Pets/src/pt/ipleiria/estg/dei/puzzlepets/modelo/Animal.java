@@ -10,6 +10,7 @@ public class Animal {
 	protected Posicao posicao;
 	protected CellRepresentation imagem;
 	protected String nomeImagem;
+	public String teste;
 
 	public Animal(String nomeImagem) {
 		super();
