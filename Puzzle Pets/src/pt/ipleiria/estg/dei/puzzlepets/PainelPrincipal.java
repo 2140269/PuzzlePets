@@ -5,6 +5,7 @@ import pt.ipleiria.estg.dei.utils.FileHandler;
 import pt.ipleiria.estg.dei.puzzlepets.modelo.Animal;
 import pt.ipleiria.estg.dei.puzzlepets.modelo.Posicao;
 import pt.ipleiria.estg.dei.puzzlepets.modelo.Raposa;
+import pt.ipleiria.estg.dei.puzzlepets.modelo.Suportado;
 import pt.ipleiria.estg.dei.puzzlepets.modelo.Suporte;
 import pt.ipleiria.estg.dei.puzzlepets.modelo.SuporteAgua;
 import pt.ipleiria.estg.dei.puzzlepets.modelo.SuporteAr;
@@ -30,7 +31,7 @@ public class PainelPrincipal {
 		lerFicheiro();
 		iniciar();
 	
-	}
+	} 	
 
 	public void adicionarSuporte(Suporte suporte) {
 		matrizSuportes[suporte.getPosicao().getLinha()][suporte.getPosicao().getColuna()] = suporte;
@@ -58,19 +59,19 @@ public class PainelPrincipal {
 					adicionarSuporte(new SuporteGelo(this, new Posicao(numLinha, coluna)));					
 				}
 				if(segundaLetra.equals(PANDA)){
-					((SuporteSuportador)matrizSuportes[numLinha][coluna]).setElemento(new Animal( "/animais/panda.png"));
+					((SuporteSuportador)matrizSuportes[numLinha][coluna]).setElemento(new Suportado(new Posicao(numLinha, coluna), "animais/panda.png"));
 				}
 				else if(segundaLetra.equals(RAPOSA)){
-					((SuporteSuportador)matrizSuportes[numLinha][coluna]).setElemento(new Animal( "/animais/raposa.png"));
+					((SuporteSuportador)matrizSuportes[numLinha][coluna]).setElemento(new Suportado (new Posicao(numLinha, coluna), "/animais/raposa.png"));
 				}
 				else if(segundaLetra.equals(POLVO)){
-					((SuporteSuportador)matrizSuportes[numLinha][coluna]).setElemento(new Animal( "/animais/polvo.png"));
+					((SuporteSuportador)matrizSuportes[numLinha][coluna]).setElemento(new Suportado(new Posicao(numLinha, coluna), "/animais/polvo.png"));
 				}
 				else if(segundaLetra.equals(SAPO)){
-					((SuporteSuportador)matrizSuportes[numLinha][coluna]).setElemento(new Animal( "/animais/sapo.png"));
+					((SuporteSuportador)matrizSuportes[numLinha][coluna]).setElemento(new Suportado(new Posicao(numLinha, coluna), "/animais/sapo.png"));
 				}
 				else if(segundaLetra.equals(PEIXE)){
-					((SuporteSuportador)matrizSuportes[numLinha][coluna]).setElemento(new Animal( "/animais/peixe.png"));
+					((SuporteSuportador)matrizSuportes[numLinha][coluna]).setElemento(new Suportado(new Posicao(numLinha, coluna), "/animais/peixe.png"));
 				}
 			}
 			numLinha++;
@@ -105,7 +106,7 @@ public class PainelPrincipal {
 	 public void atualizarSuporte(Suporte suporte) {
 		gridPanel.clear(suporte.getPosicao().getLinha(),suporte.getPosicao().getColuna());
 		gridPanel.put(suporte.getPosicao().getLinha(),suporte.getPosicao().getColuna(), suporte.getImagem());
-		gridPanel.repaint();
+		gridPane*l.repaint();
 	}
 	 */
 	/*

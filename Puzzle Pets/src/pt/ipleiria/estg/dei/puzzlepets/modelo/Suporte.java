@@ -24,10 +24,6 @@ public class Suporte{
 		return painel;
 	}
 	
-	public void setElemento( Animal animal){
-		this.animal = animal;
-	}
-
 	public void setPainel(PainelPrincipal painel) {
 		this.painel = painel;
 	}
